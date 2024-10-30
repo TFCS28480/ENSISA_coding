@@ -1,4 +1,7 @@
 This repository contains my work to sharpen my knowledges in different coding languages.
-It does not represent my entire skills and coding projects, only a part of the research I've made to deepened my understanding of some concepts.
+It represents a part of the research I've made to deepened my understanding of some concepts learned during my engineering course.
 
+I've got some Linux basics knowledges on VM that I can't show on this repository.
 I'll do my best to upload more, so stay tuned ! 
+
+A question ? Message me on LinkedIn 
