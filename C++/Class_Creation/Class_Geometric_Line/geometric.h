@@ -9,5 +9,4 @@ class Geometric :public Base{
         virtual void move(int, int)=0; 
 }; 
 
-#endif 
-
+#endif
