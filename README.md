@@ -5,3 +5,5 @@ I've got some Linux basics knowledges on VM that I can't show on this repository
 I'll do my best to upload more, so stay tuned ! 
 
 A question ? Message me on LinkedIn 
+
+NB : some URL or access path might be obsolete because I forgot to change them before uploading
