@@ -11,11 +11,13 @@ class Polynome {
 	// Constructeur et destructeur
     Polynome(); 
     Polynome(unsigned int degre, const float* coeffs);
-	Polynome(const Polynome& p);
+	// Polynome(const Polynome& p);
     ~Polynome();
 
 	//Méthode
-	char Print_Polynome(const Polynome& P);
+	void getDegre();
+	// void printPolynome();	// void printPolynome();
+	void afficher() const;
 
     // Déclaration de l'opérateur << comme ami pour qu'il puisse accéder aux membres privés
     friend std::ostream& operator<<(std::ostream& os, const Polynome& p);

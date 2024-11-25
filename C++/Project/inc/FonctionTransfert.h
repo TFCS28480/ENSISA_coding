@@ -1,22 +1,24 @@
-// #include <iostream>
-// #include "Polynome.h"
+#include <iostream>
+#include "Polynome.h"
 
-// #ifndef FONCTIONTRANSFERT_H
-// #define FONCTIONTRANSFERT_H
+#ifndef FONCTIONTRANSFERT_H
+#define FONCTIONTRANSFERT_H
 
-// class FonctionTransfert : public Polynome {
-	// public :
-		//Constructeur et Destructeur 
-		// FonctionTransfert(); 
-		// FonctionTransfert(Polynome &P1, Polynome &P2);
-		// virtual ~FonctionTransfert();
+class FonctionTransfert : public Polynome {
+	public :
+		// Constructeur et Destructeur 
+		FonctionTransfert(); 
+		FonctionTransfert(const Polynome& numerateur,const Polynome& denominateur);
+		virtual ~FonctionTransfert();
 		
-		//Surcharge
-		// friend std::ostream& operator<<(std::ostream& os, const FonctionTransfert& F);
+		void setFT() const;
+		void afficher() const;
 		
-	// private:
-		// Polynome num;
-		// Polynome denom;
-// };
+		// Surcharge
+		
+	private:
+		Polynome numerateur;
+		Polynome denominateur;
+};
 
-// #endif
+#endif

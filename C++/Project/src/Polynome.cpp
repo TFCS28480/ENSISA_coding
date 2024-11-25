@@ -24,10 +24,27 @@ Polynome::~Polynome() {
     delete[] coeff;
 }
 
-char::Print_Polynome(const Polynome& P) {
+void Polynome::getDegre()
+
+void Polynome::printPolynome() {
 	for (unsigned int i=0; i<P.degre +1; i++) {
-		std::cout << 
+		std::cout << "Le polynome est :" << coeff[i] << "x**" << i << " + ";
 	}
+}
+
+void Polynome::afficher() const {
+    for (int i = degre; i >= 0; --i) {
+        if (coeff[i] != 0.0) {
+            std::cout << coeff[i] << "x^" << i;
+            if (i > 0 && coeff[i - 1] >= 0) {
+                std::cout << " + ";
+            }
+            else if (i > 0) {
+                std::cout << " ";
+            }
+        }
+    }
+    std::cout << std::endl;
 }
 
 // Surcharge de l'opérateur << pour afficher les informations du polynôme
@@ -72,7 +89,6 @@ Polynome operator-(const Polynome& P,const Polynome& Q ) {
     }
 
     while ( max_deg > 0 && coeff[max_deg] == 0.0f ) {
-        // delete[max_deg] coeff;
         max_deg--;
     }
 
@@ -85,12 +101,9 @@ Polynome operator-(const Polynome& P,const Polynome& Q ) {
 Polynome operator*(const Polynome& P,const Polynome& Q ) { 
     unsigned int max_deg = P.degre + Q.degre;
     float* coeff = new float[max_deg + 1];
-	// unsigned int pol_min_deg = (P.degre <= Q.degre) ? P.degre : Q.degre;
 
     for (unsigned int i = 0; i < P.degre +1; i++) {
 		for (unsigned int j = 0; j < Q.degre +1; j++) {
-			// float coeff_P = (i<=P.degre) ? P.coeff[i] : 0.0f;
-			// float coeff_Q = (i<=Q.degre) ? Q.coeff[i] : 0.0f;
 			coeff[i+j] += P.coeff[i] * Q.coeff[j];
 		}
 	}
